@@ -1,10 +1,10 @@
 /**
  * Base URL for the Sarvam TeleHealth / speech-recognition video call app.
- * Set VITE_TELEHEALTH_URL in .env (e.g. http://localhost:3000) to override.
+ * Set VITE_TELEHEALTH_URL in .env to override.
  */
 export const TELEHEALTH_BASE_URL =
   (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_TELEHEALTH_URL) ||
-  'http://localhost:3000'
+  'https://speech-hackstomp.vercel.app'
 
 function getSafeBaseUrl() {
   return String(TELEHEALTH_BASE_URL || '').trim().replace(/\/$/, '')
